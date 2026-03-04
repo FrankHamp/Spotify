@@ -1,8 +1,9 @@
 package soundvault.app;
 
-import soundvault.Service.PlaylistManager;
-import soundvault.Model.Song;
-import soundvault.Model.Genre;
+import SoundVault.App.*;
+import SoundVault.Model.*;
+import SoundVault.Service.*;
+import SoundVault.Util.*;
 
 public class Main {
     public static void main(String[] args) {
