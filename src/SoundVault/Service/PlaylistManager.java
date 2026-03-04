@@ -1,6 +1,6 @@
 package SoundVault.Service;
 
-import soundvault.model.Song;
+import SoundVault.Model.Song;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -37,7 +37,7 @@ public class PlaylistManager {
         return null;
     }
 
-    public boolean editSong(String oldtitle, String newTitle) {
+    public boolean editSong(String oldTitle, String newTitle) {
         Song song = findSong(oldTitle);
 
         if (song != null) {

@@ -2,7 +2,7 @@ package SoundVault.Model;
 
 public class FreeUser extends User {
 
-    public class FreeUser(String username) {
+    public FreeUser(String username) {
         super(username);
     }
 

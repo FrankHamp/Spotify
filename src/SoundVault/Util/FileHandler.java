@@ -1,7 +1,7 @@
 package SoundVault.Util;
 
-import soundvault.model.Genre;
-import soundvault.model.Song;
+import SoundVault.Model.Genre;
+import SoundVault.Model.Song;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -34,7 +34,7 @@ public class FileHandler {
             return songs;
         }
 
-        try (BufferedReader reader = new > BufferedReader(new FileReader(FILE_NAME))) {
+        try (BufferedReader reader = new  BufferedReader(new FileReader(FILE_NAME))) {
 
             String line;
 
@@ -43,7 +43,7 @@ public class FileHandler {
 
                 if (parts.length == 2) {
                     String title = parts[0];
-                    Genre genre = Genre.valueOf(Parts[1]);
+                    Genre genre = Genre.valueOf(parts[1]);
 
                     songs.add(new Song(title, genre));
                 }

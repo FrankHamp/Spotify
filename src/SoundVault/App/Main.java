@@ -1,8 +1,8 @@
-package soundvault.app;
+package SoundVault.App;
 
-import soundvault.model.*;
-import soundvault.service.PlaylistManager;
-import soundvault.util.FileHandler;
+import SoundVault.Model.*;
+import SoundVault.Service.PlaylistManager;
+import SoundVault.Util.FileHandler;
 
 import java.util.Scanner;
 
