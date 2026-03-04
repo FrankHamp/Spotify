@@ -23,6 +23,6 @@ public class Song {
 
     @Override
     public String toString() {
-        return "Title: " + " | Genre: " + genre;
+        return "Title: " + title + " | Genre: " + genre;
     }
 }

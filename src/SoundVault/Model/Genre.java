@@ -5,7 +5,10 @@ public enum Genre {
     POP,
     JAZZ,
     HIPHOP,
-    CLASSICAL;
+    CLASSICAL,
+    AFROBEAT,
+    DANCEHALL,
+    ELECTRONIC;
 
     public static Genre fromString(String input) {
         try {

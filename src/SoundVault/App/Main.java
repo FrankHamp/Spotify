@@ -3,6 +3,7 @@ package SoundVault.App;
 import SoundVault.Model.*;
 import SoundVault.Service.PlaylistManager;
 import SoundVault.Util.FileHandler;
+import SoundVault.Model.Genre;
 
 import java.util.Scanner;
 
