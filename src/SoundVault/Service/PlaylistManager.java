@@ -63,4 +63,12 @@ public class PlaylistManager {
         }
 
     }
+
+    public List<Song> getSongs(){
+        return songs;
+    }
+
+    public void setSongs(List<Song> songs){
+        this.songs = songs;
+    }
 }
