@@ -39,19 +39,21 @@ public class Main {
     }
     fileHandler.saveToFile(manager.getSongs());
 
-}
 
-Genre genre = Genre.fromString(userInput);
+    Genre genre = Genre.fromString(userInput);
 
-    if(genre ==null){
+    if(genre ==null)
+
+    {
         System.out.
 
-println("Ugyldig genre!");
+                println("Ugyldig genre!");
     }
-PlaylistManager manager = new PlaylistManager();
-FileHandler fileHandler = new FileHandler();
+
+    PlaylistManager manager = new PlaylistManager();
+    FileHandler fileHandler = new FileHandler();
 
     manager.
 
-setSongs(fileHandler.loadFromFile());
-        }
+            setSongs(fileHandler.loadFromFile());
+}

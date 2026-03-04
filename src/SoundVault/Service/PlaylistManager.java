@@ -1,24 +1,34 @@
 package SoundVault.Service;
 
+import soundvault.model.Song;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+
 public class PlaylistManager {
+
     private List<Song> songs;
 
-    songs =new ArrayList<>();
-}
-
-public void addSong(Song song) {
-    songs.add(song);
-}
-
-public void displaySongs() {
-    if (songs.isEmpty()) {
-        System.out.println("Playlisten er tom.");
-        return;
+    public PlaylistManager() {
+        songs = new ArrayList<>();
     }
-    for (Song song : songs) {
-        System.out.println(song);
+
+    public void addSong(Song song) {
+        songs.add(song);
     }
-    public Song findSong (String title){
+
+    public boolean removeSong(String title) {
+        Song song = findSong(title);
+
+        if (song != null) {
+            songs.remove(song);
+            return true;
+        }
+        return false;
+    }
+
+    public Song findSong(String title) {
         for (Song song : songs) {
             if (song.getTitle().equalsIgnoreCase(title)) {
                 return song;
@@ -26,23 +36,31 @@ public void displaySongs() {
         }
         return null;
     }
-    public boolean removeSong (String title){
-        Song song = findSong(title);
-        if (song != null) {
-            songs.remove(song);
-            return true;
-        }
-        return false;
-    }
-    public boolean editSong (String oldtitle, String newTitle){
+
+    public boolean editSong(String oldtitle, String newTitle) {
         Song song = findSong(oldTitle);
+
         if (song != null) {
             song.setTitle(newTitle);
             return true;
         }
+
         return false;
     }
-    public void sortSongs () {
+
+    public void sortSongs() {
         songs.sort(Comparator.comparing(Song::getTitle));
+    }
+
+    public void displaySongs() {
+        if (songs.isEmpty()) {
+            System.out.println("Playlisten er tom.");
+            return;
+        }
+
+        for (Song song : songs) {
+            System.out.println(song);
+        }
+
     }
 }
