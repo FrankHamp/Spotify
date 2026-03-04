@@ -1,3 +1,5 @@
+package SoundVault.Model;
+
 public enum GENRE {
 
     ROCK,
